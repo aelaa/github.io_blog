@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Я
+title: CV
 ---
 
- * **Имя:** Илья
+ * **Имя:** Илья Шакиров
  * **Email:** [aelaau@gmail.com](mailto:aelaau@gmail.com)
  * **Github:** [aelaa](https://github.com/aelaa)
