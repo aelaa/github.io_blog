@@ -1,0 +1,7 @@
+menu:
+  home: Домой
+  archives: Архив
+  about: Обо мне
+layout:
+  search:
+    placeholder: Поиск

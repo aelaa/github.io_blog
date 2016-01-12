@@ -1,0 +1,7 @@
+menu:
+  home: Home
+  archives: Archives
+  about: Me
+layout:
+  search:
+    placeholder: Search

@@ -11,6 +11,8 @@ assets: http://aelaa.github.io/assets
 # pagination
 paginate: 10
 
+languages: ["ru", "en"]#, "ko", "zh"]
+
 # Markdown Processors
 markdown: redcarpet
 redcarpet:
@@ -29,10 +31,9 @@ title : aelaa's Blog
 
 
 ##### Menu
-menu:
-  Home: /
-  Archives: /archives
-  About: /about
+home_path: /
+archives_path: /archives
+about_path: /about
 ## you can create `tags` and `categories` folders in `../source`.
 ## And create a `index.md` file in each of them.
 ## set `front-matter`as
@@ -40,17 +41,14 @@ menu:
 ## title: tags (or categories)
 ## ---
 
-#### Widgets
 widgets:
 - category
 - tag
 - links
 - rss
-## provide seven widgets:category,tag,rss,archive,tagcloud,links,weibo,douban
 
 
-#### RSS
-rss: /atom.xml ## RSS address.
+rss: /atom.xml
 
 #### Image
 imglogo:
@@ -66,61 +64,31 @@ index:
   expand: true           ## default is unexpanding,so you can only see the short description of each post.
   excerpt_link: Read More
 
-close_aside: false  #close sidebar in post page if true
-mathjax: false      #enable mathjax if true
-
 #### Author information
 author:
-  name: aelaa      ## e.g. wuchong Author name
-  intro_line1:  "За шаблон сайта спасибо Yitao"    ## your introduction on the bottom of the page
-  intro_line2:  ""  ## the 2nd line
-  email: aelaau@gmail.com      ## e.g. imjark@gmail.com
-  twitter: aelaau   ## e.g. jarkwu for https://twitter.com/jarkwu
-  github: aelaa     ## e.g. wuchong for https://github.com/wuchong
-  facebook:   ## e.g. imjark for https://facebook.com/imjark
-  linkedin:   ## e.g. wuchong1014 for https://www.linkedin.com/in/wuchong1014
-  # google_plus: "103860633659538888207"    ## e.g. "111190881341800841449" for https://plus.google.com/u/0/111190881341800841449, the "" is needed!
-  stackoverflow:  ## e.g. 3222790 for http://stackoverflow.com/users/3222790/jark
+  name: aelaa
+  intro_line1: "За шаблон сайта спасибо Yitao"
+  intro_line2: ""
+  email: aelaau@gmail.com
+  twitter: aelaau
+  github: aelaa
+  facebook: aelaa
+  linkedin:
 ## if you set them, the corresponding  share button will show on the footer
 
-#### Toc
-toc:
-  article: true   ## show contents in article.
-  aside: true     ## show contents in aside.
-## you can set both of the value to true of neither of them.
-## if you don't want display contents in a specified post,you can modify `front-matter` and add `toc: false`.
 
-#### Links
 links:
   Hexlet: http://hexlet.io
 
 excerpt_separator: <!--more-->
 
 #### Comment
-disqus_shortname:     ## e.g. wuchong   your disqus short name.
-
-#### Analytics
-google_analytics:
-  enable: true
-  id: UA-67994495-1        ## e.g. UA-46321946-2 your google analytics ID.
-  site: auto      ## e.g. wuchong.me your google analytics site or set the value as auto.
-## You MUST upgrade to Universal Analytics first!
-## https://developers.google.com/analytics/devguides/collection/upgrade/?hl=zh_CN
+disqus_shortname: aelaa
 
 #### Miscellaneous
 fancybox: true        ## if you use gallery post or want use fancybox please set the value to true.
 totop: true           ## if you want to scroll to top in every post set the value to true
 
-#### Custom Search
-google_cse:
-  enable: true
-  cx: 004255214185073801838:_icnlls8kds  ## e.g. 018294693190868310296:abnhpuysycw your Custom Search ID.
-## https://www.google.com/cse/
-## To enable the custom search You must create a "search" folder in '/source' and a "index.md" file
-## set the 'front-matter' as
-## layout: search
-## title: search
-## ---
-
 gems:
  - jemoji
+ - jekyll-paginate

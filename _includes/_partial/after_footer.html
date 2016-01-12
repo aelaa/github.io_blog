@@ -5,7 +5,7 @@
 <script src="{{ site.assets }}/js/toc.js"></script>
 
 <script type="text/javascript">
-$(document).ready(function(){ 
+$(document).ready(function(){
   $('.navbar').click(function(){
     $('header nav').toggleClass('shownav');
   });
@@ -28,22 +28,22 @@ $(document).ready(function(){
   });
   o.click(function(){
     o.css('display', 'none').removeClass('beforeFadeIn');
-    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');
     m.removeClass('moveMain');
   });
   $(window).scroll(function(){
     o.css("top",Math.max(80,260-$(this).scrollTop()));
   });
-  
+
   {% if page.type == 'post' && site.close_aside %}
         getSize();
         if (myWidth >= 1024) {
           c.click();
         }
   {% endif %}
-  
+
   $(window).resize(function(){
-    getSize(); 
+    getSize();
     if (myWidth >= 1024) {
       $('header nav').removeClass('shownav');
     }else{
@@ -59,7 +59,7 @@ $(document).ready(function(){
 </script>
 {% if page.type == 'post' %}
 <script type="text/javascript">
-$(document).ready(function(){ 
+$(document).ready(function(){
   $('.toc-content').toc();
   var ai = $('.article-content>iframe'),
       ae = $('.article-content>embed'),
@@ -88,7 +88,7 @@ $(document).ready(function(){
 
 {% if (page.type == 'post' or page.type == 'page' or page.type == 'photo') and !site.jiathis.enable  %}
 <script type="text/javascript">
-$(document).ready(function(){ 
+$(document).ready(function(){
   var $this = $('.share'),
       url = $this.attr('data-url'),
       encodedUrl = encodeURIComponent(url),
@@ -107,7 +107,7 @@ $(document).ready(function(){
   '<span title="Share to"></span>'
   ].join('');
   $this.append(html);
-  
+
   $('.article-share-qrcode').click(function(){
     var imgSrc = $('#qrcode-pic').attr('data-src');
     $('#qrcode-pic').attr('src', imgSrc);
@@ -143,7 +143,7 @@ $(document).ready(function(){
       //$('.hoverqrcode').hide();
   });
   */
-});   
+});
 </script>
 {% endif %}
 
@@ -155,10 +155,10 @@ $(document).ready(function(){
     ds.type = 'text/javascript';ds.async = true;
     ds.src = '//static.duoshuo.com/embed.js';
     ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
+    (document.getElementsByTagName('head')[0]
     || document.getElementsByTagName('body')[0]).appendChild(ds);
   })();
-</script> 
+</script>
 {% endif %}
 {% if site.disqus_shortname %}
 <script type="text/javascript">
@@ -183,7 +183,7 @@ var disqus_shortname = '{{ site.disqus_shortname }}';
 <!--
 {% if page.type == 'tags' or page.type == 'categories' %}
 <script type="text/javascript">
-$(document).ready(function(){ 
+$(document).ready(function(){
   var list    = $('.archive-title a'),
       box     = $('.all-list-box'),
       first   = $('.archive-title a:first-of-type');
@@ -195,9 +195,9 @@ $(document).ready(function(){
       box.load(listSrc);
       list.removeClass('current');
       $(this).addClass('current');
-     });  
+     });
     });
-  }); 
+  });
 </script>
 {% endif %}
 -->
@@ -219,7 +219,7 @@ $(document).ready(function(){
             show_post(this.hash);
         }
     });
-    
+
 });
 </script>
 {% endif %}
@@ -228,7 +228,7 @@ $(document).ready(function(){
 <link rel="stylesheet" href="{{ site.assets }}/fancybox/jquery.fancybox.css" media="screen" type="text/css">
 <script src="{{ site.assets }}/fancybox/jquery.fancybox.pack.js"></script>
 <script type="text/javascript">
-$(document).ready(function(){ 
+$(document).ready(function(){
   $('.article-content').each(function(i){
     $(this).find('img').each(function(){
       if ($(this).parent().hasClass('fancybox')) return;
@@ -244,22 +244,10 @@ $(document).ready(function(){
   if($.fancybox){
     $('.fancybox').fancybox();
   }
-}); 
+});
 </script>
 {% endif %}
-
-<!-- Analytics Begin -->
-{% include _partial/analytics.html %}
-<!-- Analytics End -->
 
 <!-- Totop Begin -->
 {% include _partial/totop.html %}
 <!-- Totop End -->
-
-<!-- MathJax Begin -->
-{% include _partial/mathjax.html %}
-<!-- MathJax End -->
-
-<!-- Tiny_search Begin -->
-{% include _partial/tinysou_search.html %}
-<!-- Tiny_search End -->
